@@ -16,7 +16,7 @@ makedepends=('cmake' 'extra-cmake-modules')
 options=('!debug')
 optdepends=('polkit: password prompt for saving settings and restarting lldpd')
 source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz")
-sha256sums=('SKIP')
+sha256sums=('589aaf0e6968e30b9ec61db50e24917a9da17d647133547d91df7cab03b66f13')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=None -DBUILD_TESTING=OFF
