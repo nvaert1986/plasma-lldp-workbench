@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2026 plasma-lldp-workbench contributors
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# Licence information for files that cannot carry a header (desktop entries, documentation).
+# See https://reuse.software
+
+version = 1
+
+[[annotations]]
+path = [
+    "**/*.md",
+    ".gitignore",
+    "data/*.desktop",
+    "data/*.notifyrc",
+    "packaging/debian/**",
+    "screenshots/*.png",
+    "src/helper/*.actions",
+]
+SPDX-FileCopyrightText = "2026 plasma-lldp-workbench contributors"
+SPDX-License-Identifier = "GPL-3.0-or-later"

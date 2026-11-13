@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=LLDP Workbench
+GenericName=LLDP Neighbor and Sending Tool
+Comment=See which switch, port and VLAN this computer is on, and control what it sends over LLDP
+Exec=plasma-lldp-workbench
+Icon=network-rj45-female
+Categories=Qt;KDE;Network;Monitor;
+Keywords=LLDP;LLDP-MED;switch;port;VLAN;network;neighbor;PoE;voice;
+StartupNotify=true
+X-DBUS-StartupType=Unique

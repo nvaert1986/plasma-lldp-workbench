@@ -1,0 +1,9 @@
+[Domain]
+Name=LLDP Workbench
+Icon=network-rj45-female
+
+[io.github.nvaert1986.lldpworkbench.apply]
+Name=Change lldpd settings
+Description=Save lldpd settings permanently, change how lldpd starts and restart it
+Policy=auth_admin
+Persistence=session

@@ -1,0 +1,53 @@
+Source: plasma-lldp-workbench
+Section: net
+Priority: optional
+Maintainer: nvaert1986 <25772781+nvaert1986@users.noreply.github.com>
+Build-Depends: debhelper-compat (= 13),
+               cmake,
+               extra-cmake-modules,
+               kirigami-addons-dev,
+               libkf6auth-dev,
+               libkf6config-dev,
+               libkf6coreaddons-dev,
+               libkf6dbusaddons-dev,
+               libkf6i18n-dev,
+               libkf6notifications-dev,
+               libkf6statusnotifieritem-dev,
+               libkf6windowsystem-dev,
+               liblldpctl-dev,
+               pkgconf,
+               qt6-base-dev,
+               qt6-declarative-dev
+Standards-Version: 4.7.0
+Homepage: https://github.com/nvaert1986/plasma-lldp-workbench
+Rules-Requires-Root: no
+
+Package: plasma-lldp-workbench
+Architecture: any
+# The QML modules are loaded at run time, so shlibs cannot find them
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+         lldpd,
+         qml6-module-org-kde-config,
+         qml6-module-org-kde-coreaddons,
+         qml6-module-org-kde-desktop,
+         qml6-module-org-kde-kirigami,
+         qml6-module-org-kde-kirigamiaddons-components,
+         qml6-module-org-kde-kirigamiaddons-formcard,
+         qml6-module-org-kde-kirigamiaddons-settings,
+         qml6-module-org-kde-kirigamiaddons-statefulapp,
+         qml6-module-qtquick-controls,
+         qml6-module-qtquick-layouts,
+         qml6-module-qtquick-templates,
+         qml6-module-qtquick-window
+# Asks for the password when settings are saved or lldpd restarts
+Recommends: polkitd
+Description: Show and control LLDP on KDE Plasma
+ Shows the switch, port and VLAN this computer is connected to, from what
+ neighbors announce over LLDP and LLDP-MED, with a tray icon and
+ notifications. It also controls what this computer sends: identity,
+ interfaces, timing, LLDP-MED device class, voice and video policies,
+ location, Power over Ethernet and custom TLVs, with profiles such as an IP
+ phone or an access point to test switch and VLAN policies.
+ .
+ Experimental. lldpd does the sending and receiving.

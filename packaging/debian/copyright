@@ -1,0 +1,10 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: plasma-lldp-workbench
+Source: https://github.com/nvaert1986/plasma-lldp-workbench
+
+Files: *
+Copyright: 2026 plasma-lldp-workbench contributors
+License: GPL-3.0-or-later
+
+License: GPL-3.0-or-later
+ On Debian systems the full text is in /usr/share/common-licenses/GPL-3.

@@ -1,0 +1,28 @@
+# Maintainer: nvaert1986 <25772781+nvaert1986@users.noreply.github.com>
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+pkgname=plasma-lldp-workbench
+pkgver=0.1.0
+pkgrel=1
+pkgdesc='Show and control LLDP on KDE Plasma: neighbors, LLDP-MED, device profiles'
+arch=('x86_64')
+url='https://github.com/nvaert1986/plasma-lldp-workbench'
+license=('GPL-3.0-or-later')
+# qqc2-desktop-style and the Kirigami QML modules are loaded at run time
+depends=('lldpd' 'kauth' 'kconfig' 'kcoreaddons' 'kdbusaddons' 'ki18n' 'kirigami' 'kirigami-addons'
+	'knotifications' 'kstatusnotifieritem' 'kwindowsystem' 'qqc2-desktop-style' 'qt6-base' 'qt6-declarative'
+	'glibc' 'libstdc++')
+makedepends=('cmake' 'extra-cmake-modules')
+options=('!debug')
+optdepends=('polkit: password prompt for saving settings and restarting lldpd')
+source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz")
+sha256sums=('SKIP')
+
+build() {
+	cmake -B build -S "$pkgname-$pkgver" -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=None -DBUILD_TESTING=OFF
+	cmake --build build
+}
+
+package() {
+	DESTDIR="$pkgdir" cmake --install build
+}

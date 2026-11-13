@@ -1,0 +1,9 @@
+[Global]
+IconName=network-rj45-female
+Comment=LLDP Workbench
+DesktopEntry=io.github.nvaert1986.lldpworkbench
+
+[Event/neighborChanged]
+Name=LLDP neighbor changed
+Comment=This computer is connected to a different switch or port, or no longer hears one
+Action=Popup

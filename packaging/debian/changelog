@@ -1,0 +1,6 @@
+plasma-lldp-workbench (0.1.0-1) unstable; urgency=medium
+
+  * First release: LLDP neighbors per interface with tray icon and
+    notifications, and control over everything lldpd sends, with profiles.
+
+ -- nvaert1986 <25772781+nvaert1986@users.noreply.github.com>  Fri, 13 Nov 2026 14:30:00 +0100
